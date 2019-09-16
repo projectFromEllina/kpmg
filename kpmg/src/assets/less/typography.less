@@ -1,0 +1,28 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.title {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: @light-blue;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 65px;
+    @media(max-width: @max-xs) {
+        font-size: 30px;
+        line-height: 34px;
+    }
+}
+.link {
+    color: #3697d1;
+    display: block;
+    transition: .2s ease-out;
+    &:hover {
+        text-decoration: none;
+        text-shadow: 0px 3px 3px #64baf357;
+    }
+}

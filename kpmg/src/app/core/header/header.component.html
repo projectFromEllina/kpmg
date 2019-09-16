@@ -1,0 +1,30 @@
+<header class="header " [ngClass]="{'open': open}">
+    <div class="header__wrap">
+        <a routerLink="/" class="header_logo">
+            <img src="../../assets/img/logo.svg" alt="KPMG">
+        </a>
+        <h1 class="header_title">Platform user’s choice</h1>
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+                <li class="header__nav_item">
+                    <a class="header__nav_link" routerLink="/users" routerLinkActive="active" (click)="CloseMenu()">Users</a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" routerLink="/authorization" routerLinkActive="active" (click)="CloseMenu()">Authorization</a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" routerLink="/admin" routerLinkActive="active" (click)="CloseMenu()">Admin</a>
+                </li>
+                <a href="#" class="header_btn">go to Challenge</a>
+            </ul>
+        </nav>
+        <div class="header__mob-menu" (click)="OpenMenu()">
+            <div></div><div></div><div></div>
+        </div>
+        <a href="#" class="header_btn">go to Challenge</a>
+        <select name="language" class="header_language">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+        </select> 
+    </div>
+</header>

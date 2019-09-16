@@ -1,0 +1,416 @@
+@import "../../assets/less/variables.less";
+
+// Main banner
+.banner {
+    background: @blue;
+    color: #fff;
+    padding: 150px 45px 40px;
+    position: relative;
+    @media(max-width: @max-sm) {
+        padding: 120px 0 30px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 443px;
+        width: 100%;
+        height: 1px;
+        background: @light-blue;
+        left: 0;
+        @media(max-width: @max-sm) {
+            top: 371px;
+        }
+        @media(max-width: @max-xs) {
+            display: none;
+        }
+    }
+    &_text {
+        max-width: 680px;
+        margin-bottom: 230px;
+        font-size: 14px;
+        @media(max-width: @max-sm) {
+            max-width: 415px;
+            margin-bottom: 170px;
+        }
+        @media(max-width: @max-xs) {
+            margin-bottom: 90px;
+        }
+    }
+    &__bloks {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 220px;
+        @media(max-width: @max-sm) {
+            margin: 0 30px 100px;
+        }
+        @media(max-width: @max-xs) {
+            flex-flow: column;
+            align-items: center;
+        }
+        @media(max-width: 375px) {
+            margin-bottom: 45px;
+        }
+    }
+    &__blok {
+        font-size: 16px;
+        text-transform: uppercase;
+        max-width: 115px;
+        text-align: center;
+        min-height: 80px;
+        position: relative;
+        padding-top: 30px;
+        @media(max-width: @max-sm) {
+            min-height: 135px; 
+        }
+        &-wrap {
+            position: relative;
+            &:hover {
+              .banner__blok-main {
+                  transition: .2s ease-out;
+                  transform: translate(-50%, -50%) scale(1);
+              }  
+            }
+            &:nth-child(2) {
+                .banner__blok_circle {
+                    animation-delay: .2s;
+                }
+            }
+            &:nth-child(3) {
+                .banner__blok_circle {
+                    animation-delay: .4s;
+                }
+            }
+            &:nth-child(4) {
+                .banner__blok_circle {
+                    animation-delay: .6s;
+                }
+            }
+        }
+        &_circle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            animation: pulse 1s linear infinite;
+        }
+        &-main {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-around;
+            background: #1b5eaa;
+            box-shadow: 0 1px 4px 1px @deep-blue;
+            border-radius: 15px;
+            text-align: center;
+            padding: 15px 20px;
+            width: 227px;
+            min-height: 280px;
+            z-index: 9;
+            transition: .2s ease-out;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            @media(max-width: 375px) {
+                margin: -35px 0 50px;
+            }
+        }
+        &_title {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        &_text {
+            max-width: 185px;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+        &_img {
+            @media(max-width: @max-xs) {
+                width: 115px;
+            }
+        }
+    }
+    &__scroll {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-size: 14px;
+        letter-spacing: .5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_text {
+            padding: 0 15px;
+        }
+        &_btn {
+            width: 28px;
+            height: 43px;
+            border-radius: 14px;
+            border: 1px solid #fff;
+            transition: .2s ease-out;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 8px #81d2ff;
+            }
+            div {
+                height: 1px;
+                width: 10px;
+                background: #fff;
+                margin-bottom: 4px;
+                top: 13px;
+                position: relative;
+                margin: 0 auto 4px;
+                animation: fadeOutDown 1s linear infinite;
+                &:nth-child(2) {
+                    animation-delay: .2s;
+                }
+                &:nth-child(3) {
+                    animation-delay: .4s;
+                }
+                &:nth-child(4) {
+                    animation-delay: .6s;
+                }
+            }
+        } 
+    }
+}
+
+// Ofers
+.ofers {
+    padding-top: 85px;
+    @media(max-width: @max-sm) {
+        padding-top: 50px;
+    }
+    &_title {
+        margin-bottom: 32px;
+    }
+    &_dcr {
+        color: @deep-blue;
+        text-align: center;
+        margin: 0 auto 95px;
+        font-size: 14px;
+        max-width: 770px;
+        @media(max-width: @max-xs) {
+            margin-bottom: 245px;
+        }
+    }
+    &__bloks {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        max-width: 850px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__blok {
+        text-align: center;
+        width: 49%;
+        margin-bottom: 150px;
+        @media(max-width: @max-sm) {
+            margin-bottom: 100px;
+        }
+        @media(max-width: @max-xs) {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+        &-wrap {
+            max-width: 205px;
+            @media(max-width: @max-xs) {
+                display: flex;
+                flex-flow: column;
+                margin: 0 auto;
+            }
+        }
+        &:nth-child(even) {
+            .ofers__blok-wrap {
+                margin: 0 0 0 auto;
+                @media(max-width: @max-xs) {
+                    margin: 0 auto;
+                }
+            }
+        }
+        &_title {
+            color: @light-blue;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        &_dcr {
+            font-size: 12px;
+            color: @deep-blue;
+            max-width: 155px;
+            margin: 0 auto;
+        }
+    }
+    &_main {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #1b5eaa;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 58px;
+        text-transform: uppercase;
+        width: 278px;
+        height: 278px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        @media(max-width: @max-sm) {
+            font-size: 36px;
+            line-height: 42px;
+            width: 215px;
+            height: 215px;
+        }
+        @media(max-width: @max-xs) {
+            top: -123px;
+        }
+        div {
+            position: absolute;
+            border: 1px solid lighten(@deep-blue, 60%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: rotate 8s linear infinite;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background: @deep-blue;
+                border-radius: 50%;
+                top: 75px;
+                left: 6px;
+                @media(max-width: @max-sm) {
+                    top: 63px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+#scroll {
+    position: relative;
+    top: -160px;
+    @media(max-width: @max-sm) {
+        top: -100px;
+    }
+}
+
+// About us
+.about {
+    background-color: lighten(@light-blue, 50%);
+    padding: 85px 0 105px;
+    @media(max-width: @max-sm) {
+        padding: 50px 0;
+    }
+    &__bloks {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        @media(max-width: @max-xs) {
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+    &__blok {
+        text-align: center;
+        max-width: 230px;
+        margin: 0 45px;
+        position: relative;
+        padding-top: 70px;
+        @media(max-width: @max-sm) {
+            margin: 0 20px 50px;
+        }
+        &::after {
+            content: '';
+            width: 62px;
+            height: 62px;
+            background: url('../../assets/img/about.png') no-repeat;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:first-child {
+            &::after {
+                background-position: 5px 0;
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                background-position: -315px -5px;
+            }
+        }
+        &:nth-child(3) {
+            &::after {
+                background-position: -635px 2px;
+            }
+        }
+        &_title {
+            color: @light-blue;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        &_text {
+            color: @deep-blue;
+            font-size: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            max-height: 80px;
+            position: relative;
+            &::after {
+                content: "\02026";
+                box-sizing: content-box;
+                position: absolute;
+                bottom: 0;
+                text-align: right;
+                right: 0;
+                background: linear-gradient(to left, lighten(@light-blue, 50%) 72%, transparent);
+                width: 16px;
+                padding-right: 10px;
+            }
+            &-in {
+                -webkit-column-width: 180px;
+                -moz-column-width: 180px;
+                column-width: 180px;
+                height: 100%;
+            }
+        }
+        &_more {
+            font-size: 10px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &_link {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        &.more {
+           .about__blok {
+                &_more {
+                   display: none;
+                }
+                &_text {
+                    max-height: initial;
+                    &::after {
+                        display: none;
+                    }
+                }
+           }
+        }
+    }
+}
